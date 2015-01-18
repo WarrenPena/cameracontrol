@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Cameras</title>
+		<script src="jquery-1.6.2.js"></script>
+		<script src="presets.js"></script>
+		<script src="movebystep.js"></script>
+		<!--<script src="clicktocenter.js"></script>-->
+
+		<link rel="stylesheet" type="text/css" href="cameras.css" />
+	</head>
+
+	<body>
+		<div>
+			<h2>Axis Back</h2>
+			<div id="axisBack" class="cameraControls" camera="1">
+				<div id="axisBackPreview" style="float:left">
+					<h3 class="clickToCenter">Preview</h3>
+					<img src="http://10.0.5.5/mjpg/video.mjpg" width="320" height="240">
+				</div>
+				<div id="axisBackControl" style="float:left;padding-left:50px">
+					<h3>Move by step</h3>
+					<table>
+						<tr class="trMoveButton">
+							<td class="tdMoveButton"><button id="btnAxisBackUpLeft" class="moveButton" camera="back" direction="upleft">Up-Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackUp" class="moveButton" camera="back" direction="up">Up</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackUpRight" class="moveButton" camera="back" direction="upright">Up-Right</button></td>
+						</tr>
+						<tr class="trMoveButton">
+							<td class="tdMoveButton"><button id="btnAxisBackLeft"  class="moveButton" camera="back" direction="left">Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackNothing" class="doNothingButton" camera="back" direction="nothing">Do Nothing</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackRight" class="moveButton" camera="back" direction="right">Right</button></td>
+						</tr>
+						<tr class="trMoveButton">
+							<td class="tdMoveButton"><button id="btnAxisBackDownLeft" class="moveButton" camera="back" direction="downleft">Down-Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackDown" class="moveButton" camera="back" direction="down">Down</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackDownRight" class="moveButton" camera="back" direction="downright">Down-Right</button></td>
+						</tr>
+					</table>
+					<br>
+					<table>
+						<tr class="trMoveButton">
+							<td class="tdZoomButton"><button id="btnAxisBackIn"  class="zoomButton" camera="back" direction="500">In</button></td>
+							<td class="tdZoomButton"><button id="btnAxisBackOut"  class="zoomButton" camera="back" direction="-500">Out</button></td>
+						</tr>
+					</table>
+					<br>
+					<table>
+						<tr>
+							<td class="tdIrisButton"><button class="irisButton" camera="1" direction="open">Iris Open</button></td>
+							<td class="tdIrisButton"><button class="irisButton" camera="1" direction="close">Iris Close</button></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="presets" camera="1" style="float:left;padding-left:50px">
+					<h3>Presets</h3>
+					<div class="divPresetsList" camera="1" style="width:200px;height:230px;border-style:solid;border-color:#AAAAAA;overflow:auto">
+					</div>
+					<div class="divPresetsControls">
+						<button camera="1" class="presetGoButton">Go</button>
+						<button camera="1" class="presetNewButton">New</button>
+						<button camera="1" class="presetDeleteButton">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div style="clear:both">
+			<h2>Axis Left</h2>
+			<div id="axisBack" class="cameraControls" camera="2">
+				<div id="axisLeftPreview" style="float:left">
+					<h3>Preview</h3>
+					<img src="http://10.0.5.6/mjpg/video.mjpg" width="320" height="240">
+				</div>
+				<div id="axisBackControl" style="float:left;padding-left:50px">
+					<h3>Move by step</h3>
+					<table>
+						<tr class="trMoveButton">
+							<td class="tdMoveButton"><button id="btnAxisLeftUpLeft" class="moveButton" camera="left" direction="upleft">Up-Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisLeftUp" class="moveButton" camera="left" direction="up">Up</button></td>
+							<td class="tdMoveButton"><button id="btnAxisLeftUpRight" class="moveButton" camera="left" direction="upright">Up-Right</button></td>
+						</tr>
+						<tr class="trMoveButton">
+							<td class="tdMoveButton"><button id="btnAxisLeftLeft"  class="moveButton" camera="left" direction="left">Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisLeftNothing" class="doNothingButton" camera="left" direction="nothing">Do Nothing</button></td>
+							<td class="tdMoveButton"><button id="btnAxisLeftRight" class="moveButton" camera="left" direction="right">Right</button></td>
+						</tr>
+						<tr class="trMoveButton">
+							<td class="tdMoveButton"><button id="btnAxisLeftDownLeft" class="moveButton" camera="left" direction="downleft">Down-Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisLeftDown" class="moveButton" camera="left" direction="down">Down</button></td>
+							<td class="tdMoveButton"><button id="btnAxisLeftDownRight" class="moveButton" camera="left" direction="downright">Down-Right</button></td>
+						</tr>
+					</table>
+					<br>
+					<table>
+						<tr class="trMoveButton">
+							<td class="tdZoomButton"><button id="btnAxisLeftIn"  class="zoomButton" camera="left" direction="500">In</button></td>
+							<td class="tdZoomButton"><button id="btnAxisLeftOut"  class="zoomButton" camera="left" direction="-500">Out</button></td>
+						</tr>
+					</table>
+					<br>
+					<table>
+						<tr>
+							<td><button class="irisButton" camera="2" direction="open">Iris Open</button></td>
+							<td><button class="irisButton" camera="2" direction="close">Iris Close</button></td>
+						</tr>
+					</table>
+				</div>
+
+				<div class="presets" camera="2" style="float:left;padding-left:50px">
+					<h3>Presets</h3>
+					<div class="divPresetsList" camera="2" style="width:200px;height:230px;border-style:solid;border-color:#AAAAAA;overflow:auto">
+					</div>
+					<div class="divPresetsControls">
+						<button camera="2" class="presetGoButton">Go</button>
+						<button camera="2" class="presetNewButton">New</button>
+						<button camera="2" class="presetDeleteButton">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style='clear:both'>
+			<br>
+			<hr>
+			<h2>Live on Sunday Streams</h2>
+			<div id='divLive'>
+				<iframe width="640" height="580" src="http://www.sundaystreams.com/embed/v2/2338/59753887/1/&w=640&h=580&pp=1&pwh=220" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready( function() {
+				$(".moveButton").click(moveButtonClick);
+				$(".zoomButton").click(zoomButtonClick);
+
+				$(".doNothingButton").click(function() {
+					alert("Umm, what?");
+				});
+
+				// Set up click to center handlers
+				//$(".clickToCenter").click(clickToCenter);
+
+				// Set up motion event handlers
+				$(".irisButton").click(changeIris);
+
+				// Set up presets event handlers
+				presetsLoadAll();
+				$(".presetGoButton").click(presetsGo);
+				$(".presetNewButton").click(presetsNew);
+				$(".presetDeleteButton").click(presetsDelete);
+
+				// Set up camera switching
+				$(".switchButton").click(switchToCamera);
+
+			});
+
+			/* Motion */
+			function moveButtonClick() {
+				var camera = $(this).attr("camera");
+				var direction = $(this).attr("direction");
+
+				// Translate the camera in to an IP address
+				var cameraip = cameraNameToIp(camera);
+
+				// Run the command
+				$.ajax({
+					url: "http://" + cameraip + "/axis-cgi/com/ptz.cgi",
+					data: { "move": direction }
+				});
+			}
+
+			function zoomButtonClick() {
+				var camera = $(this).attr("camera");
+				var direction = $(this).attr("direction");
+
+				// Translate the camera in to an IP address
+				var cameraip = cameraNameToIp(camera);
+
+				// Run the command
+				$.ajax({
+					url: "http://" + cameraip + "/axis-cgi/com/ptz.cgi",
+					data: { "rzoom": direction }
+				});
+			}
+
+			function switchToCamera() {
+				var camera = $(this).attr("camera");
+
+				$.ajax({
+					url: "ajaxCameras.php",
+					type: "POST",
+					data: {
+						"action": "switchToCamera",
+						"camera": camera
+					},
+					dataType: "json",
+					success: function(data) {
+						if (data.message != "") {
+							alert(data.message);
+						}
+					},
+					error: function(data) {
+						alert("Error switching to camera");
+					}
+				});
+
+			}
+
+			function cameraNameToIp(name) {
+				var ip;
+
+				switch (name) {
+					case "back":
+						ip = "10.0.5.5";
+						break;
+
+					case "left":
+						ip = "10.0.5.6";
+						break;
+
+					default:
+						alert("Unrecognized camera " + name);
+						ip = "0.0.0.0";
+						break;
+				}
+
+				return ip;
+			}
+		</script>
+	</body>
+</html>
