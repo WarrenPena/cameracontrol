@@ -20,6 +20,10 @@ function presetsLoadSpecific(camera)
 				alert(data.message);
 			}
 			
+			 if(typeof (data.presets) == 'undefined' ) {
+				return; 
+			 }
+			
 			// Clear any existing presets
 			var divPresetList = $(".divPresetsList[camera=" + camera + "]")
 			divPresetList.html("");
