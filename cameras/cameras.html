@@ -126,7 +126,6 @@
 			<hr>
 			<h2>Live on Sunday Streams</h2>
 			<div id='divLive'>
-				<iframe width="640" height="580" src="http://www.sundaystreams.com/embed/v2/2338/59753887/1/&w=640&h=580&pp=1&pwh=220" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>
 
@@ -154,6 +153,16 @@
 				// Set up camera switching
 				$(".switchButton").click(switchToCamera);
 
+				// Set up Sunday Streams Preview
+				if (document.createElement('video').canPlayType('application/vnd.apple.mpegURL') != '') {
+					var video = $("<video></video>").attr("controls", "controls").attr("autoplay", "autoplay").attr("width", "320").attr("height", "240");
+					var source = $("<source></source>").attr("src", "http://i4.netformzcdn.com:1935/SUNS2338TEBJUMsYUmyh/SUNS_2338TEBJUMsYUmyh.sdp/playlist.m3u8").appendTo(video);
+					$("#divLive").append(video);
+					  //<source src="http://HttpLiveStream.m3u8">
+				}
+				else {
+					$("<iframe></iframe>").attr("width", "640").attr("height", "580").attr("src", "http://www.sundaystreams.com/embed/v2/2338/59753887/1/&w=640&h=580&pp=1&pwh=220").attr("frameborder", "0").appendTo("#divLive");
+				}
 			});
 
 			/* Motion */
