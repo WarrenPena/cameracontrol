@@ -20,7 +20,7 @@
 				</div>
 				<div id="axisBackControl" style="float:left;padding-left:50px">
 					<h3>Move by step</h3>
-					<table>
+					<table class="tblOBtns">
 						<tr class="trMoveButton">
 							<td class="tdMoveButton"><button id="btnAxisBackUpLeft" class="moveButton" camera="back" direction="upleft">Up-Left</button></td>
 							<td class="tdMoveButton"><button id="btnAxisBackUp" class="moveButton" camera="back" direction="up">Up</button></td>
@@ -37,15 +37,15 @@
 							<td class="tdMoveButton"><button id="btnAxisBackDownRight" class="moveButton" camera="back" direction="downright">Down-Right</button></td>
 						</tr>
 					</table>
-					<br>
-					<table>
+					<h4>Zoom</h4>
+					<table class="tblOBtns">
 						<tr class="trMoveButton">
 							<td class="tdZoomButton"><button id="btnAxisBackIn"  class="zoomButton" camera="back" direction="500">In</button></td>
 							<td class="tdZoomButton"><button id="btnAxisBackOut"  class="zoomButton" camera="back" direction="-500">Out</button></td>
 						</tr>
 					</table>
-					<br>
-					<table>
+					<h4>Iris Control (light exposure/brightness)</h4>
+					<table class="tblOBtns">
 						<tr>
 							<td class="tdIrisButton"><button class="irisButton" camera="1" direction="open">Iris Open</button></td>
 							<td class="tdIrisButton"><button class="irisButton" camera="1" direction="close">Iris Close</button></td>
@@ -75,7 +75,7 @@
 				</div>
 				<div id="axisBackControl" style="float:left;padding-left:50px">
 					<h3>Move by step</h3>
-					<table>
+					<table class="tblOBtns">
 						<tr class="trMoveButton">
 							<td class="tdMoveButton"><button id="btnAxisLeftUpLeft" class="moveButton" camera="left" direction="upleft">Up-Left</button></td>
 							<td class="tdMoveButton"><button id="btnAxisLeftUp" class="moveButton" camera="left" direction="up">Up</button></td>
@@ -92,15 +92,15 @@
 							<td class="tdMoveButton"><button id="btnAxisLeftDownRight" class="moveButton" camera="left" direction="downright">Down-Right</button></td>
 						</tr>
 					</table>
-					<br>
-					<table>
+					<h4>Zoom</h4>
+					<table class="tblOBtns">
 						<tr class="trMoveButton">
 							<td class="tdZoomButton"><button id="btnAxisLeftIn"  class="zoomButton" camera="left" direction="500">In</button></td>
 							<td class="tdZoomButton"><button id="btnAxisLeftOut"  class="zoomButton" camera="left" direction="-500">Out</button></td>
 						</tr>
 					</table>
-					<br>
-					<table>
+					<h4>Iris Control (light exposure/brightness)</h4>
+					<table class="tblOBtns">
 						<tr>
 							<td><button class="irisButton" camera="2" direction="open">Iris Open</button></td>
 							<td><button class="irisButton" camera="2" direction="close">Iris Close</button></td>
@@ -162,7 +162,7 @@
 				}
 				else {
 					$("<iframe></iframe>").attr("width", "640").attr("height", "580").attr("src", "http://www.sundaystreams.com/embed/v2/2338/59753887/1/&w=640&h=580&pp=1&pwh=220").attr("frameborder", "0").appendTo("#divLive");
-					$("#divLive").attr("style", "max-height: 360px;max-width : 640px;overflow : hidden;");
+					$("#divLive").css("max-height", "360px").css("max-width","640px").css("overflow", "hidden");
 				}
 			});
 
