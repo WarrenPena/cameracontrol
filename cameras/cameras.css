@@ -84,6 +84,7 @@ button
 button:hover
 {
 	color: #D92B4B;
+	font-weight: 700;
 }
 
 #divLive
