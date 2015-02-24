@@ -12,14 +12,13 @@
 
 	<body>
 		<div>
-			<h2>Axis Back</h2>
+			<h2 class="boldaccent">Axis Back</h2>
 			<div id="axisBack" class="cameraControls" camera="1">
 				<div id="axisBackPreview" style="float:left">
-					<h3 class="clickToCenter">Preview</h3>
 					<img src="http://10.0.5.5/mjpg/video.mjpg" width="320" height="240">
 				</div>
 				<div id="axisBackControl" style="float:left;padding-left:50px">
-					<h3>Move by step</h3>
+					<br>
 					<table>
 						<tr class="trMoveButton">
 							<td class="tdMoveButton"><button id="btnAxisBackUpLeft" class="moveButton" camera="back" direction="upleft">Up-Left</button></td>
@@ -54,7 +53,6 @@
 				</div>
 
 				<div class="presets" camera="1" style="float:left;padding-left:50px">
-					<h3>Presets</h3>
 					<div class="divPresetsList" camera="1" style="width:200px;height:230px;border-style:solid;border-color:#AAAAAA;overflow:auto">
 					</div>
 					<div class="divPresetsControls">
@@ -67,49 +65,47 @@
 		</div>
 		
 		<div style="clear:both">
-			<h2>Axis Left</h2>
+			<h2 class="boldaccent">Axis Left</h2>
 			<div id="axisBack" class="cameraControls" camera="2">
 				<div id="axisLeftPreview" style="float:left">
-					<h3>Preview</h3>
 					<img src="http://10.0.5.6/mjpg/video.mjpg" width="320" height="240">
 				</div>
 				<div id="axisBackControl" style="float:left;padding-left:50px">
-					<h3>Move by step</h3>
+					<br>
 					<table>
 						<tr class="trMoveButton">
-							<td class="tdMoveButton"><button id="btnAxisLeftUpLeft" class="moveButton" camera="left" direction="upleft">Up-Left</button></td>
-							<td class="tdMoveButton"><button id="btnAxisLeftUp" class="moveButton" camera="left" direction="up">Up</button></td>
-							<td class="tdMoveButton"><button id="btnAxisLeftUpRight" class="moveButton" camera="left" direction="upright">Up-Right</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackUpLeft" class="moveButton" camera="back" direction="upleft">Up-Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackUp" class="moveButton" camera="back" direction="up">Up</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackUpRight" class="moveButton" camera="back" direction="upright">Up-Right</button></td>
 						</tr>
 						<tr class="trMoveButton">
-							<td class="tdMoveButton"><button id="btnAxisLeftLeft"  class="moveButton" camera="left" direction="left">Left</button></td>
-							<td class="tdMoveButton"><button id="btnAxisLeftNothing" class="doNothingButton" camera="left" direction="nothing">Do Nothing</button></td>
-							<td class="tdMoveButton"><button id="btnAxisLeftRight" class="moveButton" camera="left" direction="right">Right</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackLeft"  class="moveButton" camera="back" direction="left">Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackNothing" class="doNothingButton" camera="back" direction="nothing">Do Nothing</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackRight" class="moveButton" camera="back" direction="right">Right</button></td>
 						</tr>
 						<tr class="trMoveButton">
-							<td class="tdMoveButton"><button id="btnAxisLeftDownLeft" class="moveButton" camera="left" direction="downleft">Down-Left</button></td>
-							<td class="tdMoveButton"><button id="btnAxisLeftDown" class="moveButton" camera="left" direction="down">Down</button></td>
-							<td class="tdMoveButton"><button id="btnAxisLeftDownRight" class="moveButton" camera="left" direction="downright">Down-Right</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackDownLeft" class="moveButton" camera="back" direction="downleft">Down-Left</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackDown" class="moveButton" camera="back" direction="down">Down</button></td>
+							<td class="tdMoveButton"><button id="btnAxisBackDownRight" class="moveButton" camera="back" direction="downright">Down-Right</button></td>
 						</tr>
 					</table>
 					<br>
 					<table>
 						<tr class="trMoveButton">
-							<td class="tdZoomButton"><button id="btnAxisLeftIn"  class="zoomButton" camera="left" direction="500">In</button></td>
-							<td class="tdZoomButton"><button id="btnAxisLeftOut"  class="zoomButton" camera="left" direction="-500">Out</button></td>
+							<td class="tdZoomButton"><button id="btnAxisBackIn"  class="zoomButton" camera="back" direction="500">In</button></td>
+							<td class="tdZoomButton"><button id="btnAxisBackOut"  class="zoomButton" camera="back" direction="-500">Out</button></td>
 						</tr>
 					</table>
 					<br>
 					<table>
 						<tr>
-							<td><button class="irisButton" camera="2" direction="open">Iris Open</button></td>
-							<td><button class="irisButton" camera="2" direction="close">Iris Close</button></td>
+							<td class="tdIrisButton"><button class="irisButton" camera="1" direction="open">Iris Open</button></td>
+							<td class="tdIrisButton"><button class="irisButton" camera="1" direction="close">Iris Close</button></td>
 						</tr>
 					</table>
 				</div>
 
 				<div class="presets" camera="2" style="float:left;padding-left:50px">
-					<h3>Presets</h3>
 					<div class="divPresetsList" camera="2" style="width:200px;height:230px;border-style:solid;border-color:#AAAAAA;overflow:auto">
 					</div>
 					<div class="divPresetsControls">
@@ -124,7 +120,6 @@
 		<div style='clear:both'>
 			<br>
 			<hr>
-			<h2>Live on Sunday Streams</h2>
 			<div id='divLive'>
 			</div>
 		</div>
