@@ -162,6 +162,7 @@
 				}
 				else {
 					$("<iframe></iframe>").attr("width", "640").attr("height", "580").attr("src", "http://www.sundaystreams.com/embed/v2/2338/59753887/1/&w=640&h=580&pp=1&pwh=220").attr("frameborder", "0").appendTo("#divLive");
+					$("#divLive").attr("style", "max-height: 360px;max-width : 640px;overflow : hidden;");
 				}
 			});
 

@@ -2,10 +2,3 @@
 {
 	background-color: #AAAAAA;
 }
-
-#divLive
-{
-	max-height: 360px;
-	max-width : 640px;
-	overflow : hidden;
-}
