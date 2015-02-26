@@ -59,6 +59,34 @@ body
 	height: 33%;
 }
 
+.style0
+
+/*.zoomButton
+{
+	display:block;
+	text-indent: -9999px;
+	width: 25px;
+	height: 25px;
+}
+
+.zIn
+{
+	display:block;
+	text-indent: -9999px;
+	width: 25px;
+	height: 25px;
+	background-size: 25px 25px;
+	background-color: #0D0D0D;
+	background: url(zoom-in.svg);
+}
+
+.zOut
+{
+	background-size: 25px 25px;
+	background-color: #0D0D0D;
+	background: url(zoom-out.svg);
+}*/
+
 .irisBtn
 {
 	float: right;
@@ -84,7 +112,6 @@ button
 button:hover
 {
 	color: #D92B4B;
-	font-weight: 700;
 }
 
 #divLive

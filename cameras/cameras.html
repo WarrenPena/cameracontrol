@@ -11,7 +11,7 @@
 
 	<body>
 		<div>
-			<h2 class="boldaccent">Axis Back</h2>
+			<h2 class="boldaccent">Back</h2>
 			<div id="axisBack" class="cameraControls" camera="1">
 				<div id="axisBackPreview" style="float:left">
 					<img src="http://10.0.5.5/mjpg/video.mjpg" width="320" height="240">
@@ -31,8 +31,8 @@
 					</div>
 					<br>
 					<div class="btnGroup">
-						<div class="zoomBtn"><button id="btnAxisBackIn"  class="zoomButton" camera="back" direction="500">In</button></div>
-						<div class="zoomBtn"><button id="btnAxisBackIn"  class="zoomButton" camera="back" direction="-500">Out</button></div>
+						<div class="zoomBtn"><button id="btnAxisBackIn"  class="zoomButton zIn" camera="back" direction="500"></button></div>
+						<div class="zoomBtn"><button id="btnAxisBackIn"  class="zoomButton zOut" camera="back" direction="-500"></button></div>
 						<div class="irisBtn"><button class="irisButton" camera="1" direction="open">Iris Open</button></div>
 						<div class="irisBtn"><button class="irisButton" camera="1" direction="close">Iris Close</button></div>
 					</div>
@@ -41,14 +41,14 @@
 					<div class="divPresetsList" camera="1" style="width:200px;height:230px;border-style:solid;border-color:#AAAAAA;overflow:auto"></div>
 					<div class="divPresetsControls">
 						<button camera="1" class="presetBtn presetGoButton">Go</button>
-						<button camera="1" class="presetBtn presetNewButton">New</button>
-						<button camera="1" class="presetBtn presetDeleteButton">Delete</button>
+						<button camera="1" class="presetBtn presetNewButton">+</button>
+						<button camera="1" class="presetBtn presetDeleteButton">-</button>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div style="clear:both;padding-top:5px">
-			<h2 class="boldaccent">Axis Left</h2>
+			<h2 class="boldaccent">Left</h2>
 			<div id="axisLeft" class="cameraControls" camera="2">
 				<div id="axisLeftPreview" style="float:left">
 					<img src="http://10.0.5.6/mjpg/video.mjpg" width="320" height="240">
@@ -70,8 +70,12 @@
 					<br>
 
 					<div class="btnGroup">
-						<div class="zoomBtn"><button id="btnAxisBackIn"  class="zoomButton" camera="left" direction="500">In</button></div>
-						<div class="zoomBtn"><button id="btnAxisBackIn"  class="zoomButton" camera="left" direction="-500">Out</button></div>
+						<div class="zoomBtn">
+							<button id="btnAxisBackIn"  class="zoomButton zIn zIcon" camera="left" direction="500">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><style>.style0{fill:	#1D1D1B;}</style><g><path d="M254.84 246.538c-50.803-50.796-50.789-133.443 0-184.238c50.794-50.795 133.43-50.795 184.2 0 c50.782 50.8 50.8 133.4 0 184.231C388.283 297.3 305.6 297.3 254.8 246.538z M419.231 82.2 c-39.858-39.851-104.688-39.851-144.546-0.006c-39.844 39.857-39.844 104.7 0 144.545c39.844 39.8 104.7 39.8 144.5 0 C459.075 186.8 459.1 122 419.2 82.153z" class="style0"/><path d="M76.399 479.585c-10.958 10.95-28.736 10.95-39.693-0.014l-14.885-14.887 c-10.966-10.964-10.966-28.74-0.007-39.706L187.892 258.9c10.964-10.95 28.742-10.95 39.7 0.015l14.878 14.9 c10.964 10.9 11 28.7 0 39.707L76.399 479.585z" class="style0"/><path d="M359.622 201.801c0 7.757-6.276 14.035-14.034 14.035l0 0c-7.757 0-14.035-6.278-14.035-14.035v-89.475 c0-7.75 6.278-14.035 14.035-14.035l0 0c7.758 0 14 6.3 14 14.035V201.801z" class="style0"/><path d="M300.852 171.099c-7.758 0-14.035-6.277-14.035-14.035l0 0c0-7.758 6.277-14.036 14.035-14.036h89.474 c7.758 0 14 6.3 14 14.036l0 0c0 7.757-6.277 14.035-14.035 14.035H300.852z" class="style0"/></g></svg>
+							</button>
+						</div>
+						<div class="zoomBtn"><button id="btnAxisBackIn"  class="zoomButton zOut zIcon" camera="left" direction="-500"><?php include("zoom-out.svg");?></button></div>
 						<div class="irisBtn"><button class="irisButton" camera="2" direction="open">Iris Open</button></div>
 						<div class="irisBtn"><button class="irisButton" camera="2" direction="close">Iris Close</button></div>
 					</div>
@@ -81,8 +85,8 @@
 					<div class="divPresetsList" camera="2" style="width:200px;height:230px;border-style:solid;border-color:#AAAAAA;overflow:auto"></div>
 					<div class="divPresetsControls">
 						<button camera="2" class="presetBtn presetGoButton">Go</button>
-						<button camera="2" class="presetBtn presetNewButton">New</button>
-						<button camera="2" class="presetBtn presetDeleteButton">Delete</button>
+						<button camera="2" class="presetBtn presetNewButton">+</button>
+						<button camera="2" class="presetBtn presetDeleteButton">-</button>
 					</div>
 				</div>
 			</div>
