@@ -19,9 +19,18 @@ body
 	color: #73192A;
 }
 
-.selected
+.vid
 {
-	background-color: #AAAAAA;
+	float:left;
+	width: 320px;
+	height: 240px;
+}
+
+.vid img
+{
+	margin: auto;
+	width: inherit;
+	height: inherit;
 }
 
 .btnControlGroup
@@ -38,80 +47,100 @@ body
 {
 	width: 320px;
 	height: 78px;
+	margin-bottom: 30px
 }
 
-.moveBtn
+.presets .btnGroup
 {
-	width: 33%;
-	height: 33%;
-	float: left;
-}
-
-#btnAxisBackNothing
-{
-	background-color: #0D0D0D;
-}
-
-.zoomBtn
-{
-	float: left;
-	width: 25%;
-	height: 33%;
-}
-
-.style0
-
-/*.zoomButton
-{
-	display:block;
-	text-indent: -9999px;
-	width: 25px;
-	height: 25px;
-}
-
-.zIn
-{
-	display:block;
-	text-indent: -9999px;
-	width: 25px;
-	height: 25px;
-	background-size: 25px 25px;
-	background-color: #0D0D0D;
-	background: url(zoom-in.svg);
-}
-
-.zOut
-{
-	background-size: 25px 25px;
-	background-color: #0D0D0D;
-	background: url(zoom-out.svg);
-}*/
-
-.irisBtn
-{
-	float: right;
-	width: 25%;
-	height: 33%;
-	margin-right: 5px;
+	width: 200px;
+	margin: 0px 0px 0px 4px;
 }
 
 .presetBtn
 {
-	width: 66px;
+
 }
 
-button
+.btn
 {
+	width: 29%;
+	height: 30%;
+	margin: 4px;
+	float: left;
+	font-size: .9em;
 	background-color: #D9D9D9;
 	color: #0D0D0D;
 	border: none;
-	width: 90%;
-	height: 70%;
+	-webkit-transition: background-color .2s, color .2s;
+	transition: background-color .2s, color .2s;
 }
 
-button:hover
+.btn:hover
 {
-	color: #D92B4B;
+	background-color: white;
+	color: #A5A5A5;
+}
+
+.btn:focus
+{
+	outline: none;
+}
+
+.btn:active
+{
+	opacity: .3;
+}
+
+#arrowGroup .btn:nth-child(1) span
+{
+	-ms-transform: rotate(315deg);
+	-webkit-transform: rotate(315deg);
+	transform: rotate(315deg);
+	margin-bottom:5px;
+}
+
+#arrowGroup .btn:nth-child(3) span
+{
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	margin-bottom:5px;
+}
+
+#arrowGroup .btn:nth-child(7) span
+{
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(225deg);
+	margin-top:5px;
+}
+
+#arrowGroup .btn:nth-child(9) span
+{
+	-ms-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(135deg);
+	margin-top:5px;
+}
+
+.spacerBtn
+{
+	visibility: hidden;
+}
+
+.presets
+{
+	float: left;
+	margin-left: 50px; 
+}
+
+.divPresetsList
+{
+	width:200px;
+	height:230px;
+	border-style:solid;
+	border-color:#AAAAAA;
+	overflow:auto;
 }
 
 #divLive

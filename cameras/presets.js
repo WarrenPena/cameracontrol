@@ -31,7 +31,7 @@ function presetsLoadSpecific(camera)
 			for (currentPreset = 0 ; currentPreset < data.presets.length ; currentPreset++) {
 				// Create the div for the new preset
 				currentPresetName = data.presets[currentPreset];
-				currentPresetDiv = $("<div></div>").attr("camera", camera).attr("presetname", currentPresetName).attr("id", presetsGenerateDivId(camera, currentPresetName)).html(currentPresetName);
+				currentPresetDiv = $("<div></div>").attr("camera", camera).attr("presetname", currentPresetName).attr("id", presetsGenerateDivId(camera, currentPresetName)).addClass("presetBtn").html(currentPresetName);
 				
 				// Register event handlers for the new preset
 				currentPresetDiv.click( function() {
