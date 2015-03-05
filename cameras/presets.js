@@ -1,3 +1,5 @@
+var postURL = "http://localhost/githubprojects/cameracontrol/cameras/";
+
 function presetsLoadAll()
 {
 	$(".cameraControls").each( function() {
@@ -8,7 +10,7 @@ function presetsLoadAll()
 function presetsLoadSpecific(camera)
 {
 	$.ajax({
-		url: "ajaxCameras.php",
+		url: postURL+"ajaxCameras.php",
 		type: "POST",
 		data: {
 			"action": "presetsLoad",
@@ -62,7 +64,7 @@ function presetsGo()
 	var presetName = selected.attr("presetname");
 
 	$.ajax({
-		url: "ajaxCameras.php",
+		url: postURL+"ajaxCameras.php",
 		type: "POST",
 		data: {
 			"action": "presetsGo",
@@ -125,7 +127,7 @@ function presetsDelete()
 	}
 
 	$.ajax({
-		url: "ajaxCameras.php",
+		url: postURL+"ajaxCameras.php",
 		type: "POST",
 		data: {
 			"action": "presetsDelete",

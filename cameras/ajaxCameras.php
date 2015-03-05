@@ -2,6 +2,8 @@
 	require_once "ajaxPresets.php";
 	require_once "ajaxMovebystep.php";
 
+	debugToConsole('PHP loaded!'); 
+
 	$return["result"] = TRUE;
 	$return["message"] = "";
 
@@ -29,6 +31,7 @@
 			break;
 
 		case "presetsNew":
+			debugToConsole('Case-break into presetsNew!'); 
 			presetsNew($camera, $presetName);
 			break;
 
@@ -89,6 +92,15 @@
 				die("Unknown camera number");
 				break;
 		}
+	}
+
+	function debugToConsole( $data ) {
+		if (is_array( $data )) {
+			$output = "<script>console.log( 'Debug Objects : " . implode(',', $data) . "');</script>";
+		} else {
+			$output = "<script>console.log( 'Debug Objects : " . $data . "');</script>";
+		}
+		echo $output;
 	}
 
 ?>
