@@ -88,25 +88,33 @@ function presetsNew()
 	var presetName = prompt("Name the new preset");
 	var camera = $(this).attr("camera");
 
-	$.ajax({
-		url: "ajaxCameras.php",
-		type: "POST",
-		data: {
-			"action": "presetsNew",
-			"camera": camera,
-			"presetName": presetName
-		},
-		dataType: "json",
-		success: function(data) {
-			if (data.message != "") {
-				alert(data.message);
-			}
-			presetsLoadSpecific(camera);
-		},
-		error: function(data) {
-			alert("Error saving new preset");
-		}
-	});
+	if(typeof(Storage) !== "undefined") {
+		//local storage available
+		localStorage.setItem(presetName+"camera", "CAMVAL");
+	} else {
+		//This block should not run in modern browsers with local storage
+	}
+
+
+	// $.ajax({
+	// 	url: "ajaxCameras.php",
+	// 	type: "POST",
+	// 	data: {
+	// 		"action": "presetsNew",
+	// 		"camera": camera,
+	// 		"presetName": presetName
+	// 	},
+	// 	dataType: "json",
+	// 	success: function(data) {
+	// 		if (data.message != "") {
+	// 			alert(data.message);
+	// 		}
+	// 		presetsLoadSpecific(camera);
+	// 	},
+	// 	error: function(data) {
+	// 		alert("Error saving new preset");
+	// 	}
+	// });
 }
 
 
